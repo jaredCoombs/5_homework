@@ -15,7 +15,7 @@
 
 <body>
   <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
+    <h1 class="display-3" id="clock">8:23pm ></h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
 
@@ -24,25 +24,43 @@
       <div id='time-part'></div>
     </div>
   </header>
-
-
   <div class="container">
     <!-- Timeblocks go here   moment is used for day and hour  console.log(now)   main focus is local storage-->
-    <script>
-
-      console.log("now");
+  </div>
 
 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+  </script>
+  <script> const clock = document.getElementById("clock");
 
 
-    </script>
+    function updateTime() {
+      const now = moment();
+      const humanReadable = now.format("HH:mm:ss:a: MM/DD/YYYY");
+      console.log(humanReadable);
+      clock.textContent = humanReadable;
+
+    }
+    setInterval(updateTime, 1000);
+
+ // <script src="moment.min.js"></script>
+  <script>
+
+    const m = moment();
+
+
+    console.log(moment());
+  </script>
   </div>
 
 
 
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg"> 9 a.m.</span>
+      <span class="input-group-text" id="inputGroup-sizing-lg"> 9 a.m.</span></div>
+    <div> <button class="saveBtn" type="submit">save</button>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
@@ -60,7 +78,7 @@
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">12 a.m.</span>
+      <span class="input-group-text" id="inputGroup-sizing-lg">12 p.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
