@@ -26,6 +26,16 @@
   </header>
   <div class="container">
     <!-- Timeblocks go here   moment is used for day and hour  console.log(now)   main focus is local storage-->
+
+
+
+
+  </div>
+
+
+
+
+
   </div>
 
 
@@ -44,14 +54,17 @@
 
     }
     setInterval(updateTime, 1000);
+    if (currentHour < $("#9a.m.").val()) {
 
- // <script src="moment.min.js"></script>
-  <script>
+    }
+    const currentHour = moment().hours()
+
+    console.log(currentHour);
 
     const m = moment();
 
 
-    console.log(moment());
+
   </script>
   </div>
 
@@ -59,57 +72,58 @@
 
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg"> 9 a.m.</span></div>
+      <span class="input-group-text inputGroup-sizing-lg " id="9a.m." value="9"> 9 a.m.</span></div>
     <div> <button class="saveBtn" type="submit">save</button>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">10 a.m.</span>
+      <span class="input-group-text inputGroup-sizing-lg " id="10a.m." value="10">10 a.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">11 a.m.</span>
+      <span class="input-group-text inputGroup-sizing-lg" id="11a.m." value=" 11">11 a.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">12 p.m.</span>
+      <span class="input-group-text inputGroup-sizing-lg " id="12p.m." value="12">12 p.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg"> 1 p.m.</span>
+      <span class="input-group-text inputGroup-sizing-lg" id="1p.m." value="1"> 1 p.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg"> 2 p.m.</span>
+      <span class="input-group-textinputGroup-sizing-lg " id="2p.m." value="2"> 2 p.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg"> 3 p.m.</span>
+      <span class="input-group-text inputGroup-sizing-lg" id="3p.m." value="3"> 3 p.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
   </div>
   <div class="input-group input-group-lg">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg"> 4 p.m.</span>
+      <span class="input-group-text inputGroup-sizing-lg" id="4p.m." value="4"> 4 p.m.</span>
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg"> 5 p.m.</span>
+        <span class="input-group-text inputGroup-sizing-lg" id="5p.m." value="5"> 5 p.m.</span>
       </div>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <input type="text" class="form-control inputGroup-sizing-lg" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg">
     </div>
   </div>
 </body>
